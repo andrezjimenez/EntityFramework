@@ -27,7 +27,7 @@ public class Tarea
     
     public virtual Category Categoria {get;set;}
 
-    [NotMapped]
+    // [NotMapped]
     public string Resumen {get;set;}
 }
 public enum Priority {

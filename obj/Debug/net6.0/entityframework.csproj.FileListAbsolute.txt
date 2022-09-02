@@ -53,3 +53,5 @@ C:\Users\Andrés\Desktop\Platzi\Entityframework\Entityframeworkproject\obj\Debug
 C:\Users\Andrés\Desktop\Platzi\Entityframework\Entityframeworkproject\obj\Debug\net6.0\entityframework.pdb
 C:\Users\Andrés\Desktop\Platzi\Entityframework\Entityframeworkproject\obj\Debug\net6.0\entityframework.genruntimeconfig.cache
 C:\Users\Andrés\Desktop\Platzi\Entityframework\Entityframeworkproject\obj\Debug\net6.0\ref\entityframework.dll
+C:\Users\Andrés\Desktop\Platzi\Entityframework\Entityframeworkproject\bin\Debug\net6.0\Humanizer.dll
+C:\Users\Andrés\Desktop\Platzi\Entityframework\Entityframeworkproject\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
