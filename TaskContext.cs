@@ -32,6 +32,10 @@ public class TaskContext: DbContext
             task.Property(t => t.Titulo).IsRequired().HasMaxLength(150);
             task.Property(t => t.Descripcion).IsRequired().HasMaxLength(250);
 
+            task.Property(t => t.PrioridadTarea);
+            
+            task.Property(t => t.FechaCreacion);
+
             // task.Property (t => t.Resumen).
         });
         
