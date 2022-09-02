@@ -29,6 +29,9 @@ public class Tarea
 
     // [NotMapped]
     public string Resumen {get;set;}
+
+    public string Comments {get;set;}
+
 }
 public enum Priority {
     low,

@@ -19,6 +19,7 @@ public class TaskContext: DbContext
             category.HasKey(p=> p.CategoryId);
             category.Property(p => p.Nombre).IsRequired().HasMaxLength(150);
             category.Property(p => p.Descripcion);
+            category.Property(p => p.Peso);
         }) ;
 
         modelBuilder.Entity<Tarea>(task => {
@@ -30,6 +31,7 @@ public class TaskContext: DbContext
             task.Property(t => t.PrioridadTarea);
             task.Property(t => t.FechaCreacion);
             task.Ignore( t => t.Resumen);
+            task.Property(t => t.Comments);
         });
         
     }
