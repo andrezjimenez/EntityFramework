@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Entityframeworkproject;
+using Entityframeworkproject.Models;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -23,5 +24,17 @@ app.MapGet("/api/tareas", async([FromServices] TaskContext dbContext  )=>
     {
         return Results.Ok(dbContext.Tasks.Include(p =>  p.Categoria).Where(p => p.PrioridadTarea == Entityframeworkproject.Models.Priority.Medium ));
     });
+
+app.MapPost("/api/tareas", async([FromServices] TaskContext dbContext , [FromBody] Tarea tarea )=>
+    {
+        tarea.TareaId = Guid.NewGuid();
+        tarea.FechaCreacion = DateTime.Now;
+        await dbContext.AddAsync(tarea);
+        // await dbContext.Tarea.AddRangeAsync(tarea); // Esta es otra manera de ejecutarlo
+        await dbContext.SaveChangesAsync();
+        return Results.Ok();
+      
+    });
+
 
 app.Run();
