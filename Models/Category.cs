@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace Entityframeworkproject.Models;
 
@@ -14,5 +15,6 @@ public class Category{
     
     public int Peso {get; set;}
 
+    [JsonIgnore]
     public virtual ICollection<Tarea> Tasks {get;set;}
 }

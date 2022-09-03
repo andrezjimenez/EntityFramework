@@ -52,7 +52,7 @@ public class TaskContext: DbContext
             Titulo = "Tarea 02",
             CategoryId = Guid.Parse("3e1da43b-c389-417d-bc6f-9c0be3b28eb2"),
             Descripcion = "Prueba de Descripcion 2",
-            PrioridadTarea = Priority.Medium,
+            PrioridadTarea = Priority.low,
             FechaCreacion = DateTime.Now,
             Comments = "Esta es una prueba 2"
         });
